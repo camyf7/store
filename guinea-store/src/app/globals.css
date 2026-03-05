@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "bootstrap-icons/font/bootstrap-icons";
+@import "remixicon/fonts/remixicon.css";
+
+/* Cores */
+:root {
+  --primary: #BF8B5E;
+  --prim-light: #F5E9D3;
+  --secondary: #2C3E50;
+  --accent: #7F8C8D;
+  --background: #FFFFFF;
+  --text: #34495E;
+  --white: #FFFFFF;
+  --black: #2C3E50;
+  --gradient: linear-gradient(90deg, #BF8B5E 1.9%, #D4A373 85.96%);
+
+  /* Texto - Fontes */
+  --golos-text: "Golos Text", sans-serif;
+  --dm-sans: var(--font-dm-sans), sans-serif;
+  --waffle-mango: var(--font-waffle-mango), sans-serif;
+
+  /* Transições */
+  --transition-regular: all 0.3s ease;
+  --transition-slow: 0.6s;
+}
+
+/* Classes utilitárias para fontes */
+.golos-text {
+  font-family: var(--golos-text);
+}
+
+.dm-sans {
+  font-family: var(--dm-sans);
+}
+
+.waffle-mango {
+  font-family: var(--waffle-mango);
+}
+
+body {
+  background-color: var(--background);
+  overflow-x: hidden !important;
+}
