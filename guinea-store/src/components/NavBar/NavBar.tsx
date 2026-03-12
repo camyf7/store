@@ -1,17 +1,13 @@
-'use client'
-import Link from "next/link";
-import Image from "next/image";
+import MiddleNav from "./MiddleNav";
 
-export default function MiddleNav() {
+export default function NavBar() {
     return (
-        <div className="w-full bg-[var(--primary)] border-b border-gray-300 relative">
-            <div className="flex items-center justify-between py-3 px-[8%] lg:px-[16%]">
-                
-                {/* Logo */}
-                <Link href='/' className="text-4xl lg:text-5xl font-bold text-white">
-                    Guinea<span className="text-[var(--secondary)]"> Store</span>
-                </Link>
-            </div>
-        </div>
-    );
+        <>
+            <header className="w-full">
+                <div className="lg:block">
+                    <MiddleNav />
+                </div>
+            </header>
+        </>
+    )
 }

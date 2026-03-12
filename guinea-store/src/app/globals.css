@@ -1,13 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 @import "bootstrap-icons/font/bootstrap-icons";
 @import "remixicon/fonts/remixicon.css";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Cores */
 :root {
-  --primary: #BF8B5E;
+  --primary: #c9a280;
   --prim-light: #F5E9D3;
   --secondary: #2C3E50;
   --accent: #7F8C8D;
@@ -15,6 +17,7 @@
   --text: #34495E;
   --white: #FFFFFF;
   --black: #2C3E50;
+  --pink: #f75596;
   --gradient: linear-gradient(90deg, #BF8B5E 1.9%, #D4A373 85.96%);
 
   /* Texto - Fontes */
