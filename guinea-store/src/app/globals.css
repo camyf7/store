@@ -1,5 +1,3 @@
-
-
 @import "bootstrap-icons/font/bootstrap-icons";
 @import "remixicon/fonts/remixicon.css";
 
@@ -7,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Cores */
+/* ===== VARIÁVEIS ===== */
 :root {
   --primary: #c9a280;
   --prim-light: #F5E9D3;
@@ -20,7 +18,7 @@
   --pink: #f75596;
   --gradient: linear-gradient(90deg, #BF8B5E 1.9%, #D4A373 85.96%);
 
-  /* Texto - Fontes */
+  /* Fontes */
   --golos-text: "Golos Text", sans-serif;
   --dm-sans: var(--font-dm-sans), sans-serif;
   --waffle-mango: var(--font-waffle-mango), sans-serif;
@@ -30,7 +28,26 @@
   --transition-slow: 0.6s;
 }
 
-/* Classes utilitárias para fontes */
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--dm-sans);
+}
+
+/* ===== CLASSES DE FONTE ===== */
 .golos-text {
   font-family: var(--golos-text);
 }
@@ -43,7 +60,29 @@
   font-family: var(--waffle-mango);
 }
 
-body {
-  background-color: var(--background);
-  overflow-x: hidden !important;
+/* ===== NAVBAR FIXA ===== */
+.menu-link a {
+  font-weight: 600;
+  transition: var(--transition-regular);
+}
+
+.menu-link a:hover {
+  color: var(--primary);
+}
+
+.fixed-nav {
+  animation: anim-fixed var(--transition-slow) forwards linear;
+  box-shadow: 0 2px 12px rgba(201, 162, 128, 0.3);
+  z-index: 9999;
+}
+
+@keyframes anim-fixed {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

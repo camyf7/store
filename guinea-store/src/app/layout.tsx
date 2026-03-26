@@ -3,7 +3,6 @@ import { DM_Sans, Golos_Text } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/NavBar/NavBar";
-import MiddleNav from "@/components/NavBar/MiddleNav";
 
 const dmSans = DM_Sans({
   weight: "400",
@@ -17,11 +16,6 @@ const golosText = Golos_Text({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Guinea Store",
-  description: "e-commerce moderno e profissional para produtos de porquinhos-da-índia.",
-};
-
 const waffleMango = localFont({
   src: [
     {
@@ -29,11 +23,14 @@ const waffleMango = localFont({
       weight: "400",
       style: "normal",
     },
-    
   ],
   variable: "--font-waffle-mango",
-})
+});
 
+export const metadata: Metadata = {
+  title: "Guinea Store",
+  description: "e-commerce moderno e profissional para produtos de porquinhos-da-índia.",
+};
 
 export default function RootLayout({
   children,
@@ -46,7 +43,6 @@ export default function RootLayout({
         className={`${dmSans.variable} ${golosText.variable} ${waffleMango.variable}`}
       >
         <NavBar />
-
         {children}
       </body>
     </html>
