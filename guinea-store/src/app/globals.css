@@ -86,3 +86,171 @@ body {
     opacity: 1;
   }
 }
+/* Container da imagem Hero */
+.hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 78%;
+  background: var(--gradient);
+  z-index: 0;
+  border-radius: 125px 30px 30px 30px;
+}
+/* Shape decorativo 1 */
+.hero-shape1 {
+  position: absolute;
+  top: 21%;
+  right: 0%;
+  width: 260px;
+  height: 35px;
+  background-image: url('/hero-shape1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.hero-shape2 {
+  position: absolute;
+  bottom: 0;
+   left: 0;
+  width: 150px;
+  height: 30px;
+  transform: rotate(180deg);
+  background-image: url('/hero-shape2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.border-shap1 {
+  border: 1px solid #dfdfdf;
+  position: absolute;
+  top: 10%;
+  left: -8%;
+  width: 61%;
+  height: 54%;
+  border-radius: 150px 0 0 0;
+  z-index: -1;
+}
+.border-shap2 {
+  border: 1px solid #dfdfdf;
+  position: absolute;
+  bottom: -7%;
+  right: 1%;
+  width: 50%;
+  height: 35%;
+  z-index: -1;
+  border-radius: 0 0 50px 0;
+}
+.star-shape {
+  position: absolute;
+  top: -2%;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url('/hero-shape2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  animation: Anim-rotate 5s infinite forwards linear;
+}
+
+.star-shape2 {
+  position: absolute;
+  top: 40%;
+  right: 0;
+   width: 70px;
+  height: 70px;
+  background-image: url('/hero-shape2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  animation: Anim-rotate2 5s infinite forwards linear;
+
+}
+
+.star-shape3 {
+  position: absolute;
+  top: 75%;
+  left: -12%;
+   width: 70px;
+  height: 70px;
+  background-image: url('/hero-shape2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  animation: Anim-rotate3 5s infinite forwards linear;
+
+}
+
+/* Shape decorativo 3 */
+.hero-shape3 {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-image: url('/hero-shape3.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Shape decorativo 4 */
+.hero-shape4 {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background-image: url('/hero-shape4.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+  animation: float 4s ease-in-out infinite reverse;
+}
+
+/* Onda decorativa */
+.wave-shape1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: url('/wave-shape-1.svg');
+  background-repeat: repeat-x;
+  background-size: contain;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+/* Gradiente atrás da imagem */
+.hero-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 78%;
+  background: var(--gradient);
+  z-index: 0;
+  border-radius: 30px;
+}
+
+
+/* Animação dos shapes */
+@keyframes Anim-rotate {
+  100% {
+    transform: rotate(360deg);
+}
+}

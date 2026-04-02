@@ -3,6 +3,7 @@ import { DM_Sans, Golos_Text } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/NavBar/NavBar";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const dmSans = DM_Sans({
   weight: "400",

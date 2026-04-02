@@ -17,17 +17,24 @@ export default function MiddleNav() {
           <span className="waffle-mango text-[var(--pink)]">Store</span>
         </Link>
 
-        {/* Search Box */}
-        <div className="relative mx-0 ms-6 flex flex-1 flex-col rounded-full bg-white shadow-inner lg:max-w-2xl">
-          <div className="flex items-center">
-            <input
-              type="text"
-              placeholder="Busque por produtos para seu pig..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="flex-1 rounded-l-full px-5 py-3 text-sm outline-none golos-text text-[var(--text)]"
-            />
-            <BsSearchHeart />
+        {/* Search Box com animação na borda */}
+        <div className="relative mx-0 ms-6 flex flex-1 flex-col lg:max-w-2xl">
+          <div className="group rounded-full bg-white transition-all duration-300 focus-within:ring-2 focus-within:ring-[var(--pink)] focus-within:shadow-lg">
+            <div className="flex items-center overflow-hidden rounded-full">
+              <input
+                type="text"
+                placeholder="Busque por produtos para seu pig..."
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                className="flex-1 rounded-l-full px-5 py-3 text-sm outline-none golos-text text-[var(--text)] placeholder:text-gray-400"
+              />
+              <button
+                className="flex items-center justify-center bg-[var(--pink)] px-5 py-3 text-white transition-all duration-300 hover:bg-[var(--pink)]/80"
+                aria-label="Buscar"
+              >
+                <BsSearchHeart className="text-xl" />
+              </button>
+            </div>
           </div>
         </div>
 

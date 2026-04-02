@@ -47,6 +47,19 @@ export default function BottomNav() {
     setOpenDropdowns({});
   };
 
+  // Componente do Menu-dot.svg com espaçamento
+  const MenuDot = () => (
+    <span className="mx-3 inline-block w-2 h-2">
+      <Image
+        src="/Menu-dot.svg"
+        alt="•"
+        width={8}
+        height={8}
+        className="w-full h-full"
+      />
+    </span>
+  );
+
   return (
     <div
       className={`w-full bg-white py-4 shadow-sm transition-all duration-500 ${
@@ -69,42 +82,44 @@ export default function BottomNav() {
           </Link>
         )}
 
-        {/* Menu desktop */}
+        {/* Menu desktop com Menu-dot.svg entre os itens */}
         <div className="hidden justify-center lg:flex">
-          <nav className="flex items-center gap-7">
-            {navLinks.map((link) =>
-              link.dropdown ? (
-                <div key={link.label} className="group relative">
+          <nav className="flex items-center">
+            {navLinks.map((link, index) => (
+              <div key={link.label} className="flex items-center">
+                {index > 0 && <MenuDot />}
+                {link.dropdown ? (
+                  <div className="group relative">
+                    <Link
+                      href={link.href}
+                      className="golos-text flex items-center gap-1 font-semibold text-[var(--secondary)] transition-colors hover:text-[var(--primary)]"
+                    >
+                      {link.label}
+                      <i className="bi bi-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </Link>
+
+                    <div className="absolute left-0 top-full hidden min-w-[180px] rounded-2xl border border-[var(--prim-light)] bg-white p-2 shadow-xl group-hover:block">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.label}
+                          href={item.href}
+                          className="golos-text block rounded-xl px-4 py-2 text-sm text-[var(--secondary)] transition-colors hover:bg-[var(--prim-light)] hover:text-[var(--primary)]"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
                   <Link
                     href={link.href}
-                    className="golos-text flex items-center gap-1 font-semibold text-[var(--secondary)] transition-colors hover:text-[var(--primary)]"
+                    className="golos-text font-semibold text-[var(--secondary)] transition-colors hover:text-[var(--primary)]"
                   >
                     {link.label}
-                    <i className="bi bi-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                   </Link>
-
-                  <div className="absolute left-0 top-full hidden min-w-[180px] rounded-2xl border border-[var(--prim-light)] bg-white p-2 shadow-xl group-hover:block">
-                    {link.dropdown.map((item) => (
-                      <Link
-                        key={item.label}
-                        href={item.href}
-                        className="golos-text block rounded-xl px-4 py-2 text-sm text-[var(--secondary)] transition-colors hover:bg-[var(--prim-light)] hover:text-[var(--primary)]"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="golos-text font-semibold text-[var(--secondary)] transition-colors hover:text-[var(--primary)]"
-                >
-                  {link.label}
-                </Link>
-              ),
-            )}
+                )}
+              </div>
+            ))}
           </nav>
         </div>
 
