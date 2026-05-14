@@ -11,3 +11,6 @@
 ## gerador de fonts
 - https://fontpair.co/
 - https://font.download/
+
+## comandos 
+- npx create-next-app@latest

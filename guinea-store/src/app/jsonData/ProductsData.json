@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Feno Premium",
+    "price": 39.90,
+    "category": "Alimentação",
+    "image": "/products/feno.png"
+  },
+  {
+    "id": 2,
+    "name": "Ração Natural",
+    "price": 59.90,
+    "category": "Ração",
+    "image": "/products/racao.png"
+  },
+  {
+    "id": 3,
+    "name": "Toca Plush",
+    "price": 79.90,
+    "category": "Casinhas",
+    "image": "/products/toca.png"
+  },
+  {
+    "id": 4,
+    "name": "Bebedouro 500ml",
+    "price": 24.90,
+    "category": "Acessórios",
+    "image": "/products/bebedouro.png"
+  },
+  {
+    "id": 5,
+    "name": "Kit Snacks",
+    "price": 29.90,
+    "category": "Petiscos",
+    "image": "/products/snacks.png"
+  },
+  {
+    "id": 6,
+    "name": "Caminha Soft",
+    "price": 89.90,
+    "category": "Conforto",
+    "image": "/products/caminha.png"
+  }
+]

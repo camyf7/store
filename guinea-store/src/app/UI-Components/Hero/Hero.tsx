@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="bg-[var(--prim-light)] px-[8%] py-12 lg:px-[10%]">
+      
       {/* Container principal */}
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-10 lg:flex-row">
         
